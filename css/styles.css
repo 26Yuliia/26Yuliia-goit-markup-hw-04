@@ -10,6 +10,8 @@
   --box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   --button-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
 0px 2px 2px rgba(0, 0, 0, 0.12);
+  --background-hero-color:#2E2F42;
+  --background-footer-color:#2E2F42;
 }
 
 h1, h2, h3, h4, h5, p {
@@ -133,10 +135,15 @@ align-items: center;
 /* Hero */
 
 .hero {
-  background: var(--title-text-color);
-  text-align: center;
   padding-top: 188px;
   padding-bottom: 188px;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero.jpg);
+  max-width: 1440px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--background-hero-color);
 }
 
 .hero-title {
@@ -150,6 +157,7 @@ align-items: center;
   letter-spacing: 0.02em;
   color: var(--secondary-font-color);
   width: 496px;
+  text-align: center;
 }
 
 .hero-button {
@@ -168,6 +176,7 @@ align-items: center;
   padding: 16px 32px 16px 32px;
   margin: 0 auto;
   border: none;
+  display: block;
 }
 
 .hero-button:hover {
@@ -306,7 +315,7 @@ padding-bottom: 120px;
 
 /*Footer*/
 .footer {
-  background: var(--title-text-color);
+  background-color: var(--background-footer-color);
   text-decoration: none;
   padding-top: 100px;
   padding-bottom: 100px;

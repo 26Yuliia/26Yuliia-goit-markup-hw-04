@@ -16,9 +16,14 @@
   --hover-team-color: #4d5ae5;
   --advantages-box-color: #f4f4fd;
   --customer-fill-color: #8e8f99;
-  --customer-background-active-color: #404bbf;
+  --customer-fill-active-color: #404bbf;
+  --customer-color: #8e8f99;
+  --customer-active-color: #404bbf;
   --customer-title-color: #2e2f42;
   --footer-active-color: #ffffff;
+  --footer-media-title-color: #ffffff;
+  --team-background-color: #4d5ae5;
+  --team-hover-background-color: #404bbf;
 }
 h1,
 h2,
@@ -334,20 +339,20 @@ img {
   height: 40px;
   display: flex;
   border-radius: 50%;
-  background-color: var(--accent-color);
+  background-color: var(--team-background-color);
   justify-content: center;
   align-items: center;
 }
 
 .social-list-link:hover,
 .social-list-link:focus {
-  background-color: var(--hover-team-color);
+  background-color: var(--team-hover-background-color);
 }
-
+/*
 .social-media-icon {
   fill: #f4f4fd;
 }
-
+*/
 .social-list {
   display: flex;
   justify-content: center;
@@ -377,11 +382,11 @@ img {
   gap: 24px;
 }
 
-.customer-list-item > .customer-link {
+.customer-link {
   width: 168px;
   height: 88px;
-  border: 1px solid var(--customer-fill-color);
-  fill: var(--customer-fill-color);
+  color: var(--customer-color);
+  border: 1px solid var(--customer-color);
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -391,15 +396,14 @@ img {
 .customer-icon {
   fill: var(--customer-fill-color);
 }
-
-.customer-list-item > .customer-link:hover .customer-icon,
-.customer-list-item > .customer-link:focus .customer-icon {
-  fill: var(--customer-background-active-color);
+.customer-link:hover,
+.customer-link:focus {
+  border: 1px solid var(--customer-active-color);
 }
 
-.customer-list-item > .customer-link:hover,
-.customer-list-item > .customer-link:focus {
-  border: 1px solid var(--customer-background-active-color);
+.customer-icon:hover,
+.customer-icon:focus {
+  fill: var(--customer-fill-active-color);
 }
 
 /*-------------Footer-------------*/
@@ -410,9 +414,8 @@ img {
   padding-bottom: 100px;
 }
 
-.footer-all {
+.footer-container {
   display: flex;
-  align-items: baseline;
 }
 .footer-logo {
   font-family: "Raleway", sans-serif;
@@ -438,6 +441,47 @@ img {
   margin-top: 16px;
 }
 
+.footer-logo-block {
+}
+
+.footer-media {
+  margin-left: 120px;
+}
+
+.footer-media-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--footer-media-title-color);
+}
+
+.footer-media-list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+
+  margin-top: 8px;
+}
+
+.footer-media-item {
+  margin-top: 16px;
+}
+
+.footer-media-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-media-link:hover,
+.footer-media-link:focus {
+  background-color: aquamarine;
+}
 /* Button*/
 
 .button {
@@ -532,4 +576,19 @@ img {
   border: 1px solid var(--third-color);
   border-top: none;
   padding: 32px 16px 32px 16px;
+  border-bottom: 1px solid var(--third-color);
+  border-left: 1px solid var(--third-color);
+  border-right: 1px solid var(--third-color);
+}
+
+.portfolio-content:hover,
+.portfolio-content:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.content-item:hover,
+.content-item:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
